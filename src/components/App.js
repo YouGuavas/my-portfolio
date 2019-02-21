@@ -7,8 +7,7 @@ export default class App extends Component {
 		return(
 				<div>
 					<Main />
-					<section className='page-section' id='projects'>
-					</section>
+					<Projects />
 				</div>
 			)
 	}
@@ -27,6 +26,28 @@ class Main extends Component {
 					</article>
 				</div>
 			</section>
-			)
+		)
+	}
+}
+
+class Projects extends Component {
+
+	render() {
+		return(
+			<section className='page-section' id='projects'>
+			<h1>Projects</h1>
+			<Project />
+			</section>
+		)
+	}
+}
+
+class Project extends Component {
+	render() {
+		return(
+			<div className='project'>
+				
+			</div>
+		)
 	}
 }

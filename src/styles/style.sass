@@ -16,24 +16,31 @@ body
 	display: grid
 	margin: 0px
 	width: inherit
+	font-size: 100%
 
 .page-section
 	height: 100vh
+	width: 100vw
 	display: flex
 	justify-content: center
 	width: inherit
+	.project
+		width: 100%
+		border: 1px solid white
+		height: 30vh
 
 .jumbo
 	grid-column-start: 1
 	grid-column-end: $max-grid-column
 	grid-row-start: 1
 	grid-row-end: $max-grid-row
-	background-image: url('../images/laptop800w.jpg')
-	background-size: 100%
-	background-repeat: no-repeat
-	background-attachment: fixed
 	position: relative
 	align-items: center
+	@media screen and (min-width: $break-small)
+		background-image: url('../images/laptop800w.jpg')
+		background-size: 100%
+		background-repeat: no-repeat
+		background-attachment: fixed
 	.container 
 		background-color: rgba(255, 255, 255, 0.5)
 		padding: 13px
@@ -42,22 +49,27 @@ body
 			font-size: 60px
 			color: black
 			@media screen and (max-width: $break-mid) 
-				font-size: 3.5vw
+				font-size: 3em
 			@media screen and (max-width: $break-small)
-				font-size: 20px
+				font-size: 2em
 		article
 			color: black
 			p
 				margin: 0
+				font-size: 1.3em
 
 ul
 	margin: 0px
 	width: 100vw
 	position: fixed
 	padding: 0 50px 0 50px
-	@media screen and (max-width: $break-small)
+	font-family: "Montserrat", sans-serif
+	font-size: 1.25em
+	font-weight: 100		
+	@media screen and (max-width: $break-mid)
 		bottom: 0
-	@media screen and (min-width: $break-small)
+		font-size: 1em
+	@media screen and (min-width: $break-mid)
 		top: 0
 	.li-container
 		float: right

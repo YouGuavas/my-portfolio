@@ -1,5 +1,4 @@
-$max-grid-column: 12
-$max-grid-row: 12
+$project-column-end: 5
 $break-small: 500px
 $break-mid: 1028px
 $navbar-height: 60px
@@ -24,23 +23,52 @@ body
 	display: flex
 	justify-content: center
 	width: inherit
-	.project
-		width: 100%
-		border: 1px solid white
-		height: 30vh
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	@media screen and (max-width: $break-small)
+		height: 50vh
+	&.projects
+		background-image: url('../images/code800w.jpg')
+		display: grid
+		.project
+			width: 99vw
+			border: 1px solid white
+			height: 30vh
+			background-color: black
+			display: grid
+			img 
+				grid-row-start: 1
+				grid-row-end: 3
+				grid-column-start: 1
+				grid-column-end: 2
+			p 
+				grid-row-start: 1
+				grid-row-end: 3
+				grid-column-start: 2
+				grid-column-end: $project-column-end
+			.icon-anchor
+				margin-top: auto
+				padding: 7px
+				text-align: center
+				border-top: 1px solid white
+				color: white
+				text-decoration: none
+				&:hover
+					background-color: lightgrey
+					color: grey
+				&.icon-anchor-1
+					grid-column-start: 1
+					grid-column-end: 3
+					border-right: 1px solid white
+				&.icon-anchor-2
+					grid-column-start: 3
+					grid-column-end: $project-column-end
 
 .jumbo
-	grid-column-start: 1
-	grid-column-end: $max-grid-column
-	grid-row-start: 1
-	grid-row-end: $max-grid-row
 	position: relative
-	align-items: center
-	@media screen and (min-width: $break-small)
-		background-image: url('../images/laptop800w.jpg')
-		background-size: 100%
-		background-repeat: no-repeat
-		background-attachment: fixed
+	align-items: center /* vertically center children */
+	background-image: url('../images/laptop800w.jpg')
 	.container 
 		background-color: rgba(255, 255, 255, 0.5)
 		padding: 13px

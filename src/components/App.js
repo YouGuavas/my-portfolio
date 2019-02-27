@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
+import Projects from './Projects';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fab);
 
 
 export default class App extends Component {
@@ -10,6 +14,7 @@ export default class App extends Component {
 				<div>
 					<Main />
 					<Projects />
+					<Contact />
 				</div>
 			)
 	}
@@ -32,28 +37,15 @@ class Main extends Component {
 	}
 }
 
-class Projects extends Component {
-
+class Contact extends Component {
 	render() {
 		return(
-			<section className='page-section projects' id='projects'>
-				<h1>Projects</h1>
-				<Project />
-				<Project />
+			<section className="footer" id="contact">
+				<div className="footer-container">
+					<a href='https://github.com/YouGuavas'><FontAwesomeIcon icon={['fab', 'github']} /> Hi</a>
+					<a href='#'><FontAwesomeIcon icon={['fab', 'linkedin']} /> Hi there</a>
+				</div>
 			</section>
-		)
-	}
-}
-
-class Project extends Component {
-	render() {
-		return(
-			<div className='project'>
-				<img src='' />
-				<p></p>
-				<a href="#" className="icon-anchor icon-anchor-1"><FontAwesomeIcon icon={ faGithub } /> View on Github</a>
-				<a href="#" className='icon-anchor icon-anchor-2'>View Site</a>
-			</div>
 		)
 	}
 }

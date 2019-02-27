@@ -25,7 +25,7 @@ class Main extends Component {
 	render() {
 		return(
 			<section className='jumbo page-section'>
-				<Nav />
+				<Nav links={{brand: ["Patrick", "#"], other: [["Things I've made", "#projects"], ["Contact Me", "#contact"]]}} />
 				<div className='container'>
 					<h1>Patrick Yambrick</h1>
 					<article>

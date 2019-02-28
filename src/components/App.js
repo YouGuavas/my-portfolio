@@ -30,7 +30,7 @@ class Main extends Component {
 				<div className='container'>
 					<h1>Patrick Yambrick</h1>
 					<article>
-						<p>I am a Full-stack Web Developer.</p>
+						<p>I am a Full-stack Web Engineer.</p>
 					</article>
 					<div className="main-skills">
 						<h3>Skills</h3>

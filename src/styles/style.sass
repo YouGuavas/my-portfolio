@@ -51,6 +51,7 @@ body
 					grid-row-end: 3
 					grid-column-start: 1
 					grid-column-end: 2
+					height: 100%
 				p 
 					grid-row-start: 1
 					grid-row-end: 3
@@ -94,6 +95,23 @@ body
 			p
 				margin: 0
 				font-size: 1.3em
+		.main-skills
+			border-top: 1px solid black
+			color: black
+			margin-top: 7px
+			h3
+				margin: 7px
+			ul 
+				padding: 0
+				padding-top: 13px
+				margin: 0
+				li 
+					display: inline
+					padding: 7px
+					&.skill
+						border-radius: 100%
+						background-color: none
+
 
 .footer
 	height: 15vh
@@ -112,7 +130,7 @@ body
 
 
 
-ul
+.nav-bar
 	margin: 0px
 	width: 100vw
 	position: fixed
@@ -125,6 +143,11 @@ ul
 		font-size: 1em
 	@media screen and (min-width: $break-mid)
 		top: 0
+	.hidden-icon
+		font-size: 1.5em
+		margin: 15px
+		@media screen and (min-width: $break-mid)
+			display: none
 	.li-container
 		float: right
 		li 
@@ -134,6 +157,9 @@ ul
 		float: left
 		padding: 5px
 		color: white
+		.hidden-text
+			@media screen and (max-width: $break-mid)
+				display: none
 		a
 			text-decoration: none
 			color: inherit

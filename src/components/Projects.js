@@ -22,8 +22,9 @@ class Project extends Component {
 	render() {
 		return(
 			<div className='project'>
+				<h4>Title</h4>
 				<img src={ image } />
-				<p></p>
+				<p>Lorem ipsum dolor sit amet, vitae suscipit pertinacia sed ut. Te mundi aliquam delicata mel, no quo dictas invenire adipiscing, pro et quot menandri disputationi. Appetere facilisis gloriatur et eum. Odio commodo maiorum ut has, cum ad volumus voluptatibus.</p>
 				<a href="#" className="icon-anchor icon-anchor-1"><FontAwesomeIcon icon={['fab', 'github']} /> View on Github</a>
 				<a href="#" className='icon-anchor icon-anchor-2'>View Site</a>
 			</div>

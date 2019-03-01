@@ -1,4 +1,4 @@
-$project-column-end: 5
+$project-column-end: 6
 $break-small: 500px
 $break-mid: 1028px
 $navbar-height: 60px
@@ -46,17 +46,29 @@ body
 				height: 30vh
 				background-color: black
 				display: grid
+				min-height: 0
+				h4
+					grid-row-start: 1
+					grid-row-end: 2
+					grid-column-start: 2
+					grid-column-end: 4
+					margin: 0
 				img 
 					grid-row-start: 1
 					grid-row-end: 3
 					grid-column-start: 1
 					grid-column-end: 2
-					height: 100%
+					height: 70%
+					display: relative
 				p 
-					grid-row-start: 1
-					grid-row-end: 3
+					grid-row-start: 2
+					grid-row-end: 4
 					grid-column-start: 2
 					grid-column-end: $project-column-end
+					margin: 7px 15px 0px 15px
+					overflow: scroll
+					@media screen and (max-width: $break-small)
+						font-size: 1.25em
 				.icon-anchor
 					margin-top: auto
 					padding: 7px
@@ -64,15 +76,17 @@ body
 					border-top: 1px solid white
 					color: white
 					text-decoration: none
+					grid-row-start: 4
+					grid-row-end: 5
 					&:hover
 						background-color: lightgrey
 						color: grey
 					&.icon-anchor-1
 						grid-column-start: 1
-						grid-column-end: 3
+						grid-column-end: 4
 						border-right: 1px solid white
 					&.icon-anchor-2
-						grid-column-start: 3
+						grid-column-start: 4
 						grid-column-end: $project-column-end
 
 .jumbo

@@ -21,6 +21,7 @@ export default class App extends Component {
 	}
 }
 
+
 class Main extends Component {
 
 	render() {
@@ -30,7 +31,7 @@ class Main extends Component {
 				<div className='container'>
 					<h1>Patrick Yambrick</h1>
 					<article>
-						<p>I am a Full-stack Web Engineer.</p>
+						<p>I am a <TypeWriter text={"Full-stack Web Engineer."}/></p>
 					</article>
 					<div className="main-skills">
 						<h3>Skills</h3>
@@ -52,7 +53,35 @@ class Main extends Component {
 		)
 	}
 }
+class TypeWriter extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			index: 0,
+			string: ''
+		}
+	}
 
+	typing = (index, string) => {
+		this.setState({
+			string: this.state.string + this.props.text[index],
+			index: this.state.index + 1
+		}, () => {
+			this.state.index < this.props.text.length ? setTimeout(this.typing(this.state.index, this.state.string), 1000) : null
+		})
+
+	}
+	componentDidMount() {
+		this.state.index < this.props.text.length ? setTimeout(this.typing(this.state.index, this.state.string), 1000) : null
+	}
+	render() {
+		return(
+			<span>
+				{this.state.string}
+			</span>
+		)
+	}
+}
 class Contact extends Component {
 	render() {
 		return(

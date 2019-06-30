@@ -12,7 +12,7 @@ export default class Projects extends Component {
 				{
 					image: library,
 					title: "The-Library", 
-					description: ["A full-stack app written with the MERN stack which allows users to create and comment on descriptions of books they've read.", "Skills: React, node/express, MongoDB, Twitter API, Bulma"],
+					description: ["Skills: React, node/express, MongoDB, Twitter API, Bulma", "A full-stack app written with the MERN stack which allows users to create and comment on descriptions of books they've read."],
 					github: "The-Library",
 					production: "https://the-library-of-guavas.herokuapp.com/"
 				},

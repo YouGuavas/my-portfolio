@@ -12,7 +12,6 @@ body
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 	color: white
 	background: black
-	display: grid
 	margin: 0px
 	width: inherit
 	font-size: 100%
@@ -20,80 +19,79 @@ body
 .page-section
 	height: 100vh
 	width: 100vw
-	display: flex
 	justify-content: center
 	width: inherit
 	background-size: cover
 	background-repeat: no-repeat
 	background-attachment: fixed
-	&.projects
-		background-image: url('../images/code800w.jpg')
+	display: flex
+	.main-grid
 		display: grid
-		h1
-			grid-row-start: 2
-			grid-row-end: 3
-			grid-column-start: 2
-			grid-column-end: 3
-		.project-container
-			grid-row-start: 3
-			grid-row-end: 16
-			grid-column-start: 1
-			grid-column-end: 7
+		grid-template-columns: repeat(5, 1fr)
+		grid-template-areas: ". a a a ."
+		.main
+			grid-area: a
+.projects
+	justify-content: center
+	padding: 50px
+	width: 100vw
+	width: inherit
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	background-image: url('../images/code800w.jpg')
+	display: grid
+	grid-template-columns: repeat(6, 1fr)
+	grid-template-areas: ". a a a a ." ". b b b b ."
+	h1
+		grid-area: a
+		text-align: center
+	.project-container
+		grid-area: b
+		display: grid
+		.project
+			border: 1px solid white
+			height: 30vh
+			background-color: black
 			display: grid
-			.project
-				width: 99vw
-				border: 1px solid white
-				height: 30vh
-				background-color: black
-				display: grid
-				min-height: 0
+			min-height: 0
+			margin: 20px
+			grid-template-columns: repeat(6, 1fr)
+			@media screen and (min-width: $break-small)
+				grid-template-areas: "a a e e e e" "a a b b b b" "a a b b b b" "c c c d d d"
+			@media screen and (max-width: $break-small)
+				grid-template-areas: "e e e e e e" "a a a a a a" "b b b b b b" "c c c d d d"
 				h4
-					grid-row-start: 1
-					grid-row-end: 2
-					grid-column-start: 7
-					grid-column-end: 8
-					margin: 4px 15px 0 15px
-				.project-image 
-					grid-row-start: 2
-					grid-row-end: 5
-					grid-column-start: 2
-					grid-column-end: 7
+					text-align: center
 				p 
-					grid-row-start: 2
-					grid-row-end: 3
-					grid-column-start: 7
-					grid-column-end: $project-column-end
+					font-size: 1.25em
+
+			h4
+				grid-area: e
+				margin: 4px 15px 0 15px
+			.project-image 
+				grid-area: a
+			article
+				grid-area: b
+				overflow: scroll
+				p 
 					margin: 4px 15px 0px 15px
 					overflow: scroll
-				@media screen and (max-width: $break-small)
-					h4
-						grid-column-start: 1
-						grid-column-end: $project-column-end
-						text-align: center
-					.project-image
-						display: none
-					p 
-						font-size: 1.25em
-						grid-column-start: 1
-				.icon-anchor
-					margin-top: auto
-					padding: 7px
-					text-align: center
-					border-top: 1px solid white
-					color: white
-					text-decoration: none
-					grid-row-start: 15
-					grid-row-end: 16
-					&:hover
-						background-color: lightgrey
-						color: grey
-					&.icon-anchor-1
-						grid-column-start: 1
-						grid-column-end: 10
-						border-right: 1px solid white
-					&.icon-anchor-2
-						grid-column-start: 10
-						grid-column-end: $project-column-end
+			.icon-anchor
+				margin-top: auto
+				padding: 7px
+				text-align: center
+				border-top: 1px solid white
+				color: white
+				text-decoration: none
+				&:hover
+					background-color: lightgrey
+					color: grey
+				&.icon-anchor-1
+					grid-area: c
+					border-right: 1px solid white
+				&.icon-anchor-2
+					grid-area: d
 
 .jumbo
 	position: relative
@@ -104,17 +102,19 @@ body
 		padding: 13px
 		text-align: center
 		h1
-			font-size: 60px
+			font-size: 9vh
 			color: black
 			@media screen and (max-width: $break-mid) 
-				font-size: 3em
+				font-size: 9vh
 			@media screen and (max-width: $break-small)
-				font-size: 2em
+				font-size: 8vh
 		article
 			color: black
 			p
 				margin: 0
-				font-size: 1.3em
+				font-size: 4vh
+				@media screen and (max-width: $break-small)
+					font-size: 5vh
 		.main-skills
 			border-top: 1px solid black
 			color: black
@@ -141,14 +141,18 @@ body
 		text-align: center
 		display: grid
 		margin-top: 15px
+		grid-template-columns: repeat(5, 1fr)
+		grid-template-areas: ". a . b ."
 		a
 			padding: 0
 			text-decoration: none
 			color: white
 			&:hover
 				text-decoration: underline
-
-
+			&#github
+				grid-area: a
+			&#linkedin
+				grid-area: b
 
 .nav-bar
 	margin: 0px
@@ -157,7 +161,8 @@ body
 	padding: 0 50px 0 50px
 	font-family: "Montserrat", sans-serif
 	font-size: 1.25em
-	font-weight: 100		
+	font-weight: 100
+	background: rgba(30, 30, 30, 0.7)
 	@media screen and (max-width: $break-mid)
 		bottom: 0
 		font-size: 1em

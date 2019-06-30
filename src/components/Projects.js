@@ -46,7 +46,7 @@ class Project extends Component {
 			<div className='project'>
 				<h4>{this.props.title}</h4>
 				<div className='project-image' style={{backgroundImage: `url("${this.props.image}")`}} ></div>
-				<article>{Array.isArray(desc) ? desc.map(line => (<p>{line}</p>)) : <p>{desc}</p>}</article>
+				<article>{Array.isArray(desc) ? desc.map((line, index) => (<p key={index}>{line}</p>)) : <p>{desc}</p>}</article>
 				<a href={this.props.github} className="icon-anchor icon-anchor-1"><FontAwesomeIcon icon={['fab', 'github']} /> View on Github</a>
 				<a href={this.props.production} className='icon-anchor icon-anchor-2'>View Site</a>
 			</div>

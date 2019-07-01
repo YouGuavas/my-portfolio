@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import image from '../images/300.jpg';
 import library from '../images/projects/library300.jpg'
+import urlShortener from '../images/projects/urlshortener.jpg';
 
 
 export default class Projects extends Component {
@@ -16,7 +17,12 @@ export default class Projects extends Component {
 					github: "The-Library",
 					production: "https://the-library-of-guavas.herokuapp.com/"
 				},
-				{},
+				{
+					image: urlShortener,
+					title:"URL Shortener Microservice",
+					description: ["Skills: node/express, MongoDB", "A basic URL shortener. This was part of my introduction to back-end coding with node/express."],
+					production: "https://url-shortener-guava.glitch.me/"
+			},
 				{},
 				{}			
 			]
@@ -31,7 +37,7 @@ export default class Projects extends Component {
 				<h1>Projects</h1>
 				<div className="project-container">
 					{this.state.projects.map((project, index) => (
-						<Project key={index} image={project.image || image} title={project.title || 'Title'} description={project.description || description} github={basegithub + project.github || "#"} production={project.production || "#"} />
+						<Project key={index} image={project.image || image} title={project.title || 'Title'} description={project.description || description} github={project.github ? basegithub + project.github : "#"} production={project.production || "#"} />
 					))}
 				</div>
 			</section>

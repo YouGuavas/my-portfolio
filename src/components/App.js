@@ -3,7 +3,6 @@ import Nav from './Nav';
 import Projects from './Projects';
 import Contact from './Contact';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {faHome, faAddressBook, faProjectDiagram} from '@fortawesome/free-solid-svg-icons';
 import ReactTypingEffect from 'react-typing-effect';
@@ -58,32 +57,4 @@ class Main extends Component {
 		)
 	}
 }
-class TypeWriter extends Component {
-	constructor() {
-		super();
-		this.state = {
-			index: 0,
-			string: ''
-		}
-	}
 
-	typing = (index, string) => {
-		this.setState({
-			string: this.state.string + this.props.text[index],
-			index: this.state.index + 1
-		}, () => {
-			this.state.index < this.props.text.length ? setTimeout(this.typing(this.state.index, this.state.string), 1000) : null
-		})
-
-	}
-	componentDidMount() {
-		this.state.index < this.props.text.length ? setTimeout(this.typing(this.state.index, this.state.string), 1000) : null
-	}
-	render() {
-		return(
-			<span>
-				{this.state.string}
-			</span>
-		)
-	}
-}

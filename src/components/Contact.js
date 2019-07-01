@@ -10,7 +10,7 @@ export default class Contact extends Component {
 				<div className="footer-container">
 					<a href='https://github.com/YouGuavas' id='github' ><FontAwesomeIcon icon={['fab', 'github']} /> Github</a>
           <a href='https://www.linkedin.com/in/patrick-yambrick-633099122/' id='linkedin' ><FontAwesomeIcon icon={['fab', 'linkedin']} /> Linkedin</a>
-					<p>Made with React and CSS Grid. Check out the github repo for this Portfolio right <a href="#">here</a></p>
+					<p>Made with React and CSS Grid. Check out the github repo for this Portfolio right <a href="https://github.com/YouGuavas/my-portfolio">here</a></p>
 				</div>
 			</section>
 		)

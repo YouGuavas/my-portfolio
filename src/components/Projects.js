@@ -22,9 +22,7 @@ export default class Projects extends Component {
 					title:"URL Shortener Microservice",
 					description: ["Skills: node/express, MongoDB", "A basic URL shortener. This was part of my introduction to back-end coding with node/express."],
 					production: "https://url-shortener-guava.glitch.me/"
-			},
-				{},
-				{}			
+			}		
 			]
 		}
 	}

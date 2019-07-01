@@ -144,8 +144,13 @@ body
 		text-align: center
 		display: grid
 		margin-top: 15px
-		grid-template-columns: repeat(5, 1fr)
-		grid-template-areas: ". a . b ."
+		grid-template-columns: repeat(6, 1fr)
+		grid-template-areas: ". a . . b ." ". . c c . ."
+		@media screen and (max-width: $break-mid)
+			grid-template-columns: repeat(5, 1fr)
+			grid-template-areas: ". a . b ." ". . c . ."
+			p 
+				display: none
 		a
 			padding: 0
 			text-decoration: none
@@ -156,6 +161,11 @@ body
 				grid-area: a
 			&#linkedin
 				grid-area: b
+		p 
+			grid-area: c
+			a
+				color: yellow
+				font-weight: bold
 
 .nav-bar
 	margin: 0px

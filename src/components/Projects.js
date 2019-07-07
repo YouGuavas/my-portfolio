@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import image from '../images/300.jpg';
 import library from '../images/projects/library300.jpg'
 import urlShortener from '../images/projects/urlshortener.jpg';
+import recipeBox from '../images/projects/recipebox.jpg';
 
 
 export default class Projects extends Component {
@@ -22,6 +23,13 @@ export default class Projects extends Component {
 					title:"URL Shortener Microservice",
 					description: ["Skills: node/express, MongoDB", "A basic URL shortener. This was part of my introduction to back-end coding with node/express."],
 					production: "https://url-shortener-guava.glitch.me/"
+			},
+			{
+				image: recipeBox,
+				title: "Recipe Box",
+				description: ["Skills: React, Bootstrap", "A recipe box app built with React and Bootstrap which allows users to add, edit, and delete recipes locally."],
+				github: "fcc-recipe-box",
+				production: "https://codepen.io/PatrickYambrick/full/MMPgqY"
 			}		
 			]
 		}

@@ -4,6 +4,7 @@ import image from '../images/300.jpg';
 import library from '../images/projects/library300.jpg'
 import urlShortener from '../images/projects/urlshortener.jpg';
 import recipeBox from '../images/projects/recipebox.jpg';
+import socketChat from '../images/projects/socketchat.jpg';
 
 
 export default class Projects extends Component {
@@ -18,19 +19,27 @@ export default class Projects extends Component {
 					github: "The-Library",
 					production: "https://the-library-of-guavas.herokuapp.com/"
 				},
-				{
-					image: urlShortener,
-					title:"URL Shortener Microservice",
-					description: ["Skills: node/express, MongoDB", "A basic URL shortener. This was part of my introduction to back-end coding with node/express."],
-					production: "https://url-shortener-guava.glitch.me/"
-			},
 			{
 				image: recipeBox,
 				title: "Recipe Box",
 				description: ["Skills: React, Bootstrap", "A recipe box app built with React and Bootstrap which allows users to add, edit, and delete recipes locally."],
 				github: "fcc-recipe-box",
 				production: "https://codepen.io/PatrickYambrick/full/MMPgqY"
-			}		
+			},
+			{
+				image: socketChat,
+				title: "Socket.io Chat Room", 
+				description: ["Skills: node/express, Socket.io, MongoDB, passport.js, pug", "A Chat Room app built with node/express and Socket.io. Github authentication with passport.js."],
+				github: "socket-chat-room",
+				production: "https://spiritual-shell.glitch.me/chat"
+			},
+			{
+				image: urlShortener,
+				title:"URL Shortener Microservice",
+				description: ["Skills: node/express, MongoDB", "A basic URL shortener. This was part of my introduction to back-end coding with node/express."],
+				github: "FCC-URL-Shortener",
+				production: "https://url-shortener-guava.glitch.me/"
+		}	
 			]
 		}
 	}

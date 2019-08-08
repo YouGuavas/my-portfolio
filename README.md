@@ -11,3 +11,6 @@ This will serve as my portfolio!
 1. [React](https://reactjs.org/)
 2. [Sass](https://sass-lang.com/)
 3. [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+## Live Version
+[Click here](https://portfolio-of-patrick.herokuapp.com/)
